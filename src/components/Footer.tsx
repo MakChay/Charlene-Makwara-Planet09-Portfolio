@@ -2,13 +2,10 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    // Using CSS Grid for responsive footer layout
     <footer className="bg-black text-gray-400">
       <div className="container mx-auto px-4 py-10">
-        {/* Responsive grid layout with different column counts */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            {/* Added hover animation for brand name */}
             <h3 className="text-xl font-bold text-amber-400 mb-4 hover:text-amber-300 transition-colors duration-300">
               C. Makwara
             </h3>
@@ -16,7 +13,6 @@ const Footer = () => {
               A modern starter template with a clean design using black, gold, and silver gray colors.
             </p>
           </div>
-          {/* Using Flexbox for link columns */}
           <div className="flex flex-col">
             <h4 className="text-white font-bold mb-4">Links</h4>
             <ul className="space-y-2">
@@ -51,14 +47,13 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-4">Contact</h4>
             <address className="not-italic space-y-2">
-              <p>123 Main Street</p>
-              <p>Anytown, USA 12345</p>
-              <p className="mt-2">info@yourbrand.com</p>
+              <p>8 Winterton Road</p>
+              <p>Ritson, Durban 4001</p>
+              <p className="mt-2">chaymak16@gmail.com</p>
               <p>(123) 456-7890</p>
             </address>
           </div>
         </div>
-        {/* Added subtle animation for copyright text */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="hover:text-amber-400 transition-colors duration-300">
             &copy; {new Date().getFullYear()} C. Makwara. All rights reserved.

@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
+  
   const slides = [
     {
-      title: "Welcome to C. Makwara",
+      title: "Welcome to C Makwara's Portfolio",
       description: "A modern and elegant starter template with a clean design using black, gold, and silver gray colors.",
       image: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&q=80&w=1920&h=1080"
     },
@@ -30,6 +30,7 @@ const Hero = () => {
 
   return (
     <section className="relative h-[80vh] overflow-hidden">
+      {/* Background Slideshow */}
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -48,26 +49,28 @@ const Hero = () => {
         </div>
       ))}
 
+      {/* Content */}
       <div className="relative h-full">
         <div className="container mx-auto px-4 h-full flex items-center justify-center">
           <div className="text-center">
+            {/* Animated title with bounce effect */}
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white opacity-0 animate-[bounceIn_1s_ease-out_forwards]">
-            {slides[currentSlide].title.split(' ').map((word, index) => (
-  <span
-    key={index}
-    className="inline-block mr-2 hover:animate-bounce hover:text-amber-400 transition-colors duration-300"
-  >
-    {word}
-  </span>
-
-
+              {slides[currentSlide].title.split(' ').map((word, index) => (
+                <span
+                  key={index}
+                  className="inline-block hover:animate-bounce hover:text-amber-400 transition-colors duration-300"
+                >
+                  {word}{' '}
+                </span>
               ))}
             </h1>
 
+            {/* Animated description */}
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto opacity-0 animate-[slideUp_1s_ease-in_0.5s_forwards]">
               {slides[currentSlide].description}
             </p>
 
+            {/* Buttons with bounce effect on hover */}
             <div className="flex justify-center gap-4">
               <button className="bg-amber-400 hover:bg-amber-500 text-black font-bold py-3 px-6 rounded-md transition-all duration-300 hover:scale-105 transform hover:animate-bounce">
                 Get Started
@@ -77,6 +80,7 @@ const Hero = () => {
               </button>
             </div>
 
+            {/* Slide indicators */}
             <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-2">
               {slides.map((_, index) => (
                 <button
