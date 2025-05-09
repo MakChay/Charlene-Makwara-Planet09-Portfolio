@@ -1,49 +1,48 @@
 import React, { useState } from 'react';
 
-const Navbar = () => {
-  // Added state for mobile menu
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+interface NavbarProps {
+  isDarkMode: boolean;
+  toggleDarkMode: () => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
-    // Using Flexbox for navbar layout
-    <header className="bg-black text-white shadow-md fixed w-full top-0 z-50">
+    <header className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-md fixed w-full top-0 z-50 transition-colors duration-300">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          {/* Added hover animation for brand name */}
           <div className="text-xl font-bold text-amber-400 hover:text-amber-300 transition-colors duration-300">
             C. Makwara
           </div>
 
-          {/* Mobile menu button */}
-          <button 
-            className="md:hidden text-white hover:text-amber-400 transition-colors duration-300"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <svg 
-              className="w-6 h-6" 
-              fill="none" 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth="2" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor"
+          <div className="flex items-center gap-6">
+            <button
+              onClick={toggleDarkMode}
+              className="hidden md:flex p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:text-amber-400 dark:hover:text-amber-300 transition-colors duration-300"
+              aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
             >
-              {isMenuOpen ? (
-                <path d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
+              {isDarkMode ? '🌞' : '🌙'}
+            </button>
 
-          {/* Desktop navigation */}
+            <button 
+              className="md:hidden text-gray-900 dark:text-white hover:text-amber-400 transition-colors duration-300"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            >
+              <svg className="w-6 h-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                {isMenuOpen ? <path d="M6 18L18 6M6 6l12 12" /> : <path d="M4 6h16M4 12h16M4 18h16" />}
+              </svg>
+            </button>
+          </div>
+
           <nav className="hidden md:block">
-            <ul className="flex space-x-6">
+            <ul className="flex space-x-6 items-center">
               {['Home', 'About', 'Services', 'Contact'].map((item, index) => (
                 <li key={index}>
                   <a 
                     href="#" 
-                    className="hover:text-amber-400 transition-all duration-300 hover:scale-110 inline-block"
+                    className="hover:text-amber-400 transition-all duration-300 hover:scale-110 inline-block dark:hover:text-amber-300"
                   >
                     {item}
                   </a>
@@ -53,19 +52,26 @@ const Navbar = () => {
           </nav>
         </div>
 
-        {/* Mobile navigation */}
         <nav className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} mt-4`}>
           <ul className="flex flex-col space-y-4">
             {['Home', 'About', 'Services', 'Contact'].map((item, index) => (
               <li key={index}>
                 <a 
                   href="#" 
-                  className="block hover:text-amber-400 transition-colors duration-300 hover:pl-2"
+                  className="block hover:text-amber-400 transition-colors duration-300 hover:pl-2 dark:hover:text-amber-300"
                 >
                   {item}
                 </a>
               </li>
             ))}
+            <li>
+              <button
+                onClick={toggleDarkMode}
+                className="w-full text-left p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:text-amber-400 dark:hover:text-amber-300 transition-colors duration-300"
+              >
+                Switch to {isDarkMode ? 'Light' : 'Dark'} Mode
+              </button>
+            </li>
           </ul>
         </nav>
       </div>
