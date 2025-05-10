@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { collection, addDoc } from 'firebase/firestore';
+import { db } from '../firebase';
+import { FaUser, FaEnvelope, FaCommentDots, FaFacebook, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -46,12 +49,17 @@ const Contact = () => {
     if (!validateForm()) return;
 
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      await addDoc(collection(db, 'contacts'), formData);
       setSubmitSuccess(true);
       setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Failed to send your message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
       setTimeout(() => setSubmitSuccess(false), 3000);
-    }, 1000);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -61,59 +69,82 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+    <section id="contact" className="py-16 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-white">Contact Us</h2>
-        <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
-          <div className="mb-6">
-            <label htmlFor="name" className="block text-gray-700 dark:text-gray-300 mb-2">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleInputChange}
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all"
-            />
-            {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
-          </div>
-          <div className="mb-6">
-            <label htmlFor="email" className="block text-gray-700 dark:text-gray-300 mb-2">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleInputChange}
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all"
-            />
-            {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
-          </div>
-          <div className="mb-6">
-            <label htmlFor="message" className="block text-gray-700 dark:text-gray-300 mb-2">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleInputChange}
-              rows={4}
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all"
-            ></textarea>
-            {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
-          </div>
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full bg-amber-400 hover:bg-amber-500 text-black font-bold py-2 px-4 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            {isSubmitting ? 'Sending...' : 'Send Message'}
-          </button>
-          {submitSuccess && (
-            <div className="mt-4 p-4 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-200 rounded-lg transition-opacity duration-300">
-              Message sent successfully!
+        <h2 className="text-4xl font-bold text-center mb-8">Get in Touch</h2>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Contact Form */}
+          <form onSubmit={handleSubmit} className="bg-gray-800 p-8 rounded-lg shadow-lg">
+            <div className="mb-6">
+              <label htmlFor="name" className="block text-gray-300 mb-2">Name</label>
+              <div className="flex items-center bg-gray-700 rounded-lg">
+                <FaUser className="text-gray-400 ml-3" />
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-2 bg-transparent text-white focus:ring-2 focus:ring-amber-400 focus:outline-none"
+                />
+              </div>
+              {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
             </div>
-          )}
-        </form>
+            <div className="mb-6">
+              <label htmlFor="email" className="block text-gray-300 mb-2">Email</label>
+              <div className="flex items-center bg-gray-700 rounded-lg">
+                <FaEnvelope className="text-gray-400 ml-3" />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-2 bg-transparent text-white focus:ring-2 focus:ring-amber-400 focus:outline-none"
+                />
+              </div>
+              {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+            </div>
+            <div className="mb-6">
+              <label htmlFor="message" className="block text-gray-300 mb-2">Message</label>
+              <div className="flex items-start bg-gray-700 rounded-lg">
+                <FaCommentDots className="text-gray-400 ml-3 mt-3" />
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  rows={4}
+                  className="w-full px-4 py-2 bg-transparent text-white focus:ring-2 focus:ring-amber-400 focus:outline-none"
+                ></textarea>
+              </div>
+              {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
+            </div>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full bg-amber-400 hover:bg-amber-500 text-black font-bold py-2 px-4 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isSubmitting ? 'Sending...' : 'Send Message'}
+            </button>
+            {submitSuccess && (
+              <div className="mt-4 p-4 bg-green-500 text-white rounded-lg">
+                Message sent successfully!
+              </div>
+            )}
+          </form>
+
+          {/* Contact Details */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold">Contact Information</h3>
+            <p>Feel free to reach out to us through the form or via our social media channels below.</p>
+            <div className="flex space-x-4">
+              <a href="#" className="text-2xl text-blue-500 hover:text-blue-400"><FaFacebook /></a>
+              <a href="https://github.com/MakChay" className="text-2xl text-blue-400 hover:text-blue-300"><FaGithub /></a>
+              <a href="www.linkedin.com/in/charlene-makwara-2417972b1" className="text-2xl text-blue-600 hover:text-blue-500"><FaLinkedin /></a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

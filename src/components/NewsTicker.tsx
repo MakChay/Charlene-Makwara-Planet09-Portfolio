@@ -64,6 +64,7 @@ const NewsTicker: React.FC<NewsTickerProps> = ({ isDarkMode = false }) => {
   }, []);
 
   return (
+    <section id="NewsTicker"className="relative">
     <div 
       ref={tickerRef}
       className={`${isDarkMode ? 'bg-gray-800 text-gray-100' : 'bg-gray-100 text-gray-800'} py-3 overflow-hidden transition-colors duration-300`}
@@ -116,6 +117,7 @@ const NewsTicker: React.FC<NewsTickerProps> = ({ isDarkMode = false }) => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

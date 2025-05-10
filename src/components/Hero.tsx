@@ -5,7 +5,7 @@ const Hero = () => {
   
   const slides = [
     {
-      title: "Welcome to C Makwara's Portfolio",
+      title: "Welcome to ",
       description: "A modern and elegant starter template with a clean design using black, gold, and silver gray colors.",
       image: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&q=80&w=1920&h=1080"
     },
