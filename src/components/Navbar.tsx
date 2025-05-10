@@ -15,7 +15,6 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
           <div className="text-xl font-bold text-amber-400 hover:text-amber-300 transition-colors duration-300">
             C. Makwara
           </div>
-
           <div className="flex items-center gap-6">
             <button
               onClick={toggleDarkMode}
@@ -41,7 +40,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
               {['Home', 'About', 'Services', 'Contact'].map((item, index) => (
                 <li key={index}>
                   <a 
-                    href="#" 
+                    href={`#${item.toLowerCase()}`}
                     className="hover:text-amber-400 transition-all duration-300 hover:scale-110 inline-block dark:hover:text-amber-300"
                   >
                     {item}
@@ -52,12 +51,14 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
           </nav>
         </div>
 
+
+
         <nav className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} mt-4`}>
           <ul className="flex flex-col space-y-4">
-            {['Home', 'About', 'Services', 'Contact'].map((item, index) => (
+            {['Home', 'About', 'Services','Features','Pricing', 'NewsTicker', 'Contact'].map((item, index) => (
               <li key={index}>
                 <a 
-                  href="#" 
+                  href={`#${item.toLowerCase()}`}
                   className="block hover:text-amber-400 transition-colors duration-300 hover:pl-2 dark:hover:text-amber-300"
                 >
                   {item}
@@ -74,6 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
             </li>
           </ul>
         </nav>
+        
       </div>
     </header>
   );

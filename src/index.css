@@ -67,4 +67,8 @@
     letter-spacing: normal;
     font-family: sans-serif; /* try a default to test */
   }
-  
+
+  section {
+    scroll-margin-top: 4rem; /* Adjust based on your navbar height */
+  }
+
