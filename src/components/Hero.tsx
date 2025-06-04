@@ -72,12 +72,18 @@ const Hero = () => {
 
             {/* Buttons with bounce effect on hover */}
             <div className="flex justify-center gap-4">
-              <button className="bg-amber-400 hover:bg-amber-500 text-black font-bold py-3 px-6 rounded-md transition-all duration-300 hover:scale-105 transform hover:animate-bounce">
+              <a
+                href="#contact"
+                className="px-6 py-3 bg-gray-900 text-white font-bold rounded-lg shadow-md hover:bg-gray-800 transition-all duration-300"
+              >
                 Get Started
-              </button>
-              <button className="bg-transparent hover:bg-gray-800 text-white border border-gray-400 font-bold py-3 px-6 rounded-md transition-all duration-300 hover:border-amber-400 hover:animate-bounce">
+              </a>
+              <a
+                href="#about"
+                className="px-6 py-3 bg-amber-400 text-black font-bold rounded-lg shadow-md hover:bg-amber-500 transition-all duration-300 mr-4"
+              >
                 Learn More
-              </button>
+              </a>
             </div>
 
             {/* Slide indicators */}
