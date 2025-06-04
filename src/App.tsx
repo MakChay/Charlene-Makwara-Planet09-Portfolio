@@ -10,6 +10,7 @@ import Pricing from './components/Pricing';
 import Home from './components/Home';
 import About from './components/About';
 import Services from './components/Services';
+import Projects from './components/Projects';
 
 const App: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
@@ -42,6 +43,7 @@ const App: React.FC = () => {
         <About />
         <Services />
         <Features />
+        <Projects />
         <Pricing />
         <NewsTicker isDarkMode={isDarkMode} />
         <Contact />

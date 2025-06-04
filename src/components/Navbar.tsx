@@ -37,7 +37,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
 
           <nav className="hidden md:block">
             <ul className="flex space-x-6 items-center">
-              {['Home', 'About', 'Services', 'Contact'].map((item, index) => (
+              {['Home', 'About', 'Services', 'Projects', 'Contact'].map((item, index) => (
                 <li key={index}>
                   <a 
                     href={`#${item.toLowerCase()}`}
