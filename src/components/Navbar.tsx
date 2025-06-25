@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Logo from './path-to-logo.svg'; // Adjust the import based on your file structure
+// Update the path and filename below to match your actual logo image location and name
+// import Logo from '../images/logo.png'; // Example: adjust as needed
 
 interface NavbarProps {
   isDarkMode: boolean;
@@ -14,12 +15,12 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="text-xl font-bold text-amber-400 hover:text-amber-300 transition-colors duration-300">
-            <img
+            {/* <img
               src={Logo}
               alt="C. Makwara brand logo"
               className="w-12 h-12 object-contain"
               loading="lazy"
-            />
+            /> */}
             C. Makwara
           </div>
           <div className="flex items-center gap-6">
