@@ -12,7 +12,8 @@ const Footer = () => {
               <img 
                 src={Logo} 
                 alt="Chay's Logo" 
-                className="w-12 h-12 object-contain" // Adjust size as needed
+                className="w-12 h-12 object-contain" 
+                loading="lazy"
               />
               <h3 className="text-xl font-bold text-amber-400 hover:text-amber-300 transition-colors duration-300">
                 C. Makwara

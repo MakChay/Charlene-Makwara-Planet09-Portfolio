@@ -69,7 +69,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white">
+    <section id="contact" className="py-16 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white" role="region" aria-label="Contact section">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-8">Get in Touch</h2>
         <div className="grid md:grid-cols-2 gap-12 items-center">

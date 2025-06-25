@@ -74,13 +74,15 @@ const Hero = () => {
             <div className="flex justify-center gap-4">
               <a
                 href="#contact"
-                className="px-6 py-3 bg-gray-900 text-white font-bold rounded-lg shadow-md hover:bg-gray-800 transition-all duration-300"
+                className="bg-amber-400 text-black px-6 py-3 rounded-lg font-bold shadow hover:bg-amber-500 transition focus:outline-none focus:ring-2 focus:ring-amber-400"
+                aria-label="Contact Me"
               >
                 Get Started
               </a>
               <a
                 href="#about"
-                className="px-6 py-3 bg-amber-400 text-black font-bold rounded-lg shadow-md hover:bg-amber-500 transition-all duration-300 mr-4"
+                className="px-6 py-3 bg-amber-400 text-black font-bold rounded-lg shadow-md hover:bg-amber-500 transition-all duration-300 mr-4 focus:outline-none focus:ring-2 focus:ring-amber-400"
+                aria-label="Learn more about Charlene Makwara"
               >
                 Learn More
               </a>

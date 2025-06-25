@@ -63,7 +63,7 @@ const Pricing: React.FC = () => {
   };
 
   return (
-    <section id='pricing' className="py-16 bg-gray-50 dark:bg-gray-900">
+    <section id="pricing" className="py-16 bg-gray-50 dark:bg-gray-900" role="region" aria-label="Pricing section">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-6 text-gray-900 dark:text-white">
           Pricing Plans
