@@ -21,7 +21,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <section id="services" className="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300" role="region" aria-label="Services section">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
           Our Services

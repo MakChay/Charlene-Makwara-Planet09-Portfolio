@@ -46,7 +46,7 @@ const Projects: React.FC = () => {
   );
 
   return (
-    <section id="projects" className="py-16 bg-gray-50 dark:bg-gray-900 relative">
+    <section id="projects" className="py-16 bg-gray-50 dark:bg-gray-900 relative" role="region" aria-label="Projects section">
       {/* Animated Section Divider (Top) */}
       <div className="absolute -top-8 left-0 w-full overflow-hidden leading-none rotate-180" aria-hidden="true">
         <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-16">
@@ -103,8 +103,9 @@ const Projects: React.FC = () => {
                   <div className="flex items-center mb-2">
                     <img
                       src={`https://github.com/MakChay.png`}
-                      alt="GitHub avatar"
+                      alt="MakChay GitHub avatar"
                       className="w-8 h-8 rounded-full mr-3 border border-gray-300 group-hover:border-amber-400 transition-all duration-300"
+                      loading="lazy"
                     />
                     <h3 className="text-xl font-semibold text-amber-400 group-hover:text-amber-500 transition-colors duration-300">{repo.name}</h3>
                   </div>

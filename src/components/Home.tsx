@@ -2,7 +2,12 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <section id="home" className="py-16 bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+    <section
+      id="home"
+      className="py-16 bg-gray-100 dark:bg-gray-900 transition-colors duration-300"
+      role="region"
+      aria-label="Home section"
+    >
       <div className="container mx-auto px-4 text-center">
         <h1 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white animate-[slideIn_1s_ease-in-out]">
          C Makwara's Portfolio

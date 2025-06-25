@@ -3,13 +3,14 @@ import RoboHuman from '../images/RoboHuman.jpg'; // Adjust the path to your imag
 
 const About = () => {
   return (
-    <section id="about" className="py-16 bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
+    <section id="about" className="py-16 bg-gray-100 dark:bg-gray-800 transition-colors duration-300" role="region" aria-label="About section">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
         <div className="md:w-1/2">
-          <img 
-            src={RoboHuman} 
-            alt="About Us" 
+          <img
+            src={RoboHuman}
+            alt="About Charlene Makwara, developer portrait"
             className="rounded-lg shadow-lg"
+            loading="lazy"
           />
         </div>
         <div className="md:w-1/2">
