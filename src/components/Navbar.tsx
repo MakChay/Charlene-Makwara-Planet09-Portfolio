@@ -43,15 +43,13 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
             </button>
           </div>
 
-          <nav className="hidden md:block" role="navigation" aria-label="Main navigation">
+          <nav className="hidden md:block">
             <ul className="flex space-x-6 items-center">
               {['Home', 'About', 'Services', 'Projects', 'Contact'].map((item, index) => (
                 <li key={index}>
                   <a 
                     href={`#${item.toLowerCase()}`}
                     className="hover:text-amber-400 transition-all duration-300 hover:scale-110 inline-block dark:hover:text-amber-300"
-                    // Ensure all links have clear, descriptive text and aria-labels if needed
-                    // Example: <a href="#projects" aria-label="View Projects section">Projects</a>
                   >
                     {item}
                   </a>
@@ -63,7 +61,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
 
 
 
-        <nav className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} mt-4`} role="navigation" aria-label="Main navigation">
+        <nav className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} mt-4`}>
           <ul className="flex flex-col space-y-4">
             {['Home', 'About', 'Services','Features','Pricing', 'NewsTicker', 'Contact'].map((item, index) => (
               <li key={index}>
@@ -92,6 +90,3 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
 };
 
 export default Navbar;
-
-// Add focus styles for accessibility (Tailwind's focus:outline-none focus:ring-2 focus:ring-amber-400 is already used on main buttons)
-// Example: <button className="focus:outline-none focus:ring-2 focus:ring-amber-400">Button</button>
