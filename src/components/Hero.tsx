@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const slides = [
     {
-      title: "Welcome to ",
-      description: "A modern and elegant starter template with a clean design using black, gold, and silver gray colors.",
+      title: "Hi, I'm Charlene – Student-Tech Athlete",
+      description: "Bridging the gap between athletics and technology as a basketball team manager & web developer.",
       image: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&q=80&w=1920&h=1080"
     },
     {
-      title: "Modern Design",
-      description: "Built with the latest technologies and best practices for modern web development.",
+      title: "Volunteer Web Developer",
+      description: "Building digital solutions for Singawe Innovative while managing DUT Basketball Team.",
       image: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&q=80&w=1920&h=1080"
     },
     {
-      title: "Responsive Layout",
-      description: "Perfectly optimized for all devices and screen sizes.",
+      title: "Leadership Through Service",
+      description: "Combining athletic discipline with technical skills to create meaningful community impact.",
       image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1920&h=1080"
     }
   ];
@@ -55,14 +55,7 @@ const Hero = () => {
           <div className="text-center">
             {/* Animated title with bounce effect */}
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white opacity-0 animate-[bounceIn_1s_ease-out_forwards]">
-              {slides[currentSlide].title.split(' ').map((word, index) => (
-                <span
-                  key={index}
-                  className="inline-block hover:animate-bounce hover:text-amber-400 transition-colors duration-300"
-                >
-                  {word}{' '}
-                </span>
-              ))}
+              {slides[currentSlide].title}
             </h1>
 
             {/* Animated description */}
@@ -71,20 +64,28 @@ const Hero = () => {
             </p>
 
             {/* Buttons with bounce effect on hover */}
-            <div className="flex justify-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a
-                href="#contact"
-                className="bg-amber-400 text-black px-6 py-3 rounded-lg font-bold shadow hover:bg-amber-500 transition focus:outline-none focus:ring-2 focus:ring-amber-400"
-                aria-label="Contact Me"
+                href="#projects"
+                className="bg-amber-400 text-black px-6 py-3 rounded-lg font-bold shadow hover:bg-amber-500 transition focus:outline-none focus:ring-2 focus:ring-amber-400 text-center"
+                aria-label="View My Work"
               >
-                Get Started
+                View My Work
               </a>
               <a
-                href="#about"
-                className="px-6 py-3 bg-amber-400 text-black font-bold rounded-lg shadow-md hover:bg-amber-500 transition-all duration-300 mr-4 focus:outline-none focus:ring-2 focus:ring-amber-400"
-                aria-label="Learn more about Charlene Makwara"
+                href="#contact"
+                className="px-6 py-3 bg-transparent border-2 border-amber-400 text-amber-400 font-bold rounded-lg shadow-md hover:bg-amber-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-400 text-center"
+                aria-label="Contact Me"
               >
-                Learn More
+                Contact Me
+              </a>
+              <a
+                href="/Charlene_Makwara_Resume.pdf"
+                download="Charlene_Makwara_Resume.pdf"
+                className="px-6 py-3 bg-gray-800 text-white font-bold rounded-lg shadow-md hover:bg-gray-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-400 text-center"
+                aria-label="Download Resume"
+              >
+                📄 Download Resume
               </a>
             </div>
 

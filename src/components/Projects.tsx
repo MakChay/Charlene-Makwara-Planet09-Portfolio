@@ -54,33 +54,108 @@ const Projects: React.FC = () => {
         </svg>
       </div>
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Projects</h2>
-        <div className="mb-6 flex flex-wrap gap-2 items-center">
-          <input
-            type="text"
-            placeholder="Search projects..."
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-            className="px-4 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-400 mr-2"
-            aria-label="Search projects"
-          />
-          <button
-            className={`px-4 py-2 rounded ${filter === '' ? 'bg-amber-400 text-black' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200'}`}
-            onClick={() => setFilter('')}
-            aria-label="Show all languages"
-          >
-            All
-          </button>
-          {languages.map(lang => (
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Featured Projects</h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Showcasing my best work including competition wins, hackathon solutions, and community platforms
+          </p>
+        </div>
+        {/* Featured Projects */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Highlighted Achievements</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* USAs Competition Project */}
+            <div className="bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-900 dark:to-amber-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-amber-400">
+              <div className="flex items-center mb-4">
+                <span className="text-3xl mr-3">🏆</span>
+                <div>
+                  <h4 className="text-xl font-bold text-gray-900 dark:text-white">USSAs Competition</h4>
+                  <p className="text-amber-600 dark:text-amber-300 font-semibold">1st Place Winner</p>
+                </div>
+              </div>
+              <p className="text-gray-700 dark:text-gray-200 mb-4">
+                Managed the University Basketball team to victory in the University Students Association competition.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-2 py-1 bg-amber-200 dark:bg-amber-700 text-amber-800 dark:text-amber-200 rounded text-sm">Python</span>
+                <span className="px-2 py-1 bg-amber-200 dark:bg-amber-700 text-amber-800 dark:text-amber-200 rounded text-sm">React</span>
+                <span className="px-2 py-1 bg-amber-200 dark:bg-amber-700 text-amber-800 dark:text-amber-200 rounded text-sm">Leadership</span>
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-300">2024</div>
+            </div>
+
+            {/* JCI Hackathon Project */}
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-blue-400">
+              <div className="flex items-center mb-4">
+                <span className="text-3xl mr-3">🥉</span>
+                <div>
+                  <h4 className="text-xl font-bold text-gray-900 dark:text-white">JCI Hackathon</h4>
+                  <p className="text-blue-600 dark:text-blue-300 font-semibold">3rd Place Winner</p>
+                </div>
+              </div>
+              <p className="text-gray-700 dark:text-gray-200 mb-4">
+                Developed a creative solution during the Junior Chamber International hackathon, showcasing rapid prototyping skills.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-2 py-1 bg-blue-200 dark:bg-blue-700 text-blue-800 dark:text-blue-200 rounded text-sm">C#</span>
+                <span className="px-2 py-1 bg-blue-200 dark:bg-blue-700 text-blue-800 dark:text-blue-200 rounded text-sm">Innovation</span>
+                <span className="px-2 py-1 bg-blue-200 dark:bg-blue-700 text-blue-800 dark:text-blue-200 rounded text-sm">Teamwork</span>
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-300">2024</div>
+            </div>
+
+            {/* Hybrid Demo Monday Platform */}
+            <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900 dark:to-green-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-green-400">
+              <div className="flex items-center mb-4">
+                <span className="text-3xl mr-3">🎤</span>
+                <div>
+                  <h4 className="text-xl font-bold text-gray-900 dark:text-white">Hybrid Demo Monday</h4>
+                  <p className="text-green-600 dark:text-green-300 font-semibold">Platform Creator & Host</p>
+                </div>
+              </div>
+              <p className="text-gray-700 dark:text-gray-200 mb-4">
+                Created and hosted a platform for DUT students to showcase innovation and collaborate across disciplines.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-2 py-1 bg-green-200 dark:bg-green-700 text-green-800 dark:text-green-200 rounded text-sm">Community</span>
+                <span className="px-2 py-1 bg-green-200 dark:bg-green-700 text-green-800 dark:text-green-200 rounded text-sm">Event Management</span>
+                <span className="px-2 py-1 bg-green-200 dark:bg-green-700 text-green-800 dark:text-green-200 rounded text-sm">Leadership</span>
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-300">2023-2024</div>
+            </div>
+          </div>
+        </div>
+
+        {/* GitHub Projects Filter */}
+        <div className="mb-6">
+          <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">GitHub Projects</h3>
+          <div className="flex flex-wrap gap-2 items-center">
+            <input
+              type="text"
+              placeholder="Search projects..."
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              className="px-4 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-400 mr-2"
+              aria-label="Search projects"
+            />
             <button
-              key={lang}
-              className={`px-4 py-2 rounded ${filter === lang ? 'bg-amber-400 text-black' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200'}`}
-              onClick={() => setFilter(lang)}
-              aria-label={`Filter by ${lang}`}
+              className={`px-4 py-2 rounded ${filter === '' ? 'bg-amber-400 text-black' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200'}`}
+              onClick={() => setFilter('')}
+              aria-label="Show all languages"
             >
-              {lang}
+              All
             </button>
-          ))}
+            {languages.map(lang => (
+              <button
+                key={lang}
+                className={`px-4 py-2 rounded ${filter === lang ? 'bg-amber-400 text-black' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200'}`}
+                onClick={() => setFilter(lang)}
+                aria-label={`Filter by ${lang}`}
+              >
+                {lang}
+              </button>
+            ))}
+          </div>
         </div>
         {loading ? (
           <div className="text-center py-10 text-lg text-gray-600 dark:text-gray-300 animate-pulse">Loading projects...</div>

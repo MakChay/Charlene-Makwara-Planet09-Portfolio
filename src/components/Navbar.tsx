@@ -21,7 +21,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
               className="w-12 h-12 object-contain"
               loading="lazy"
             /> */}
-            C. Makwara
+            CM | Charlene Makwara
           </div>
           <div className="flex items-center gap-6">
             <button
@@ -45,7 +45,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
 
           <nav className="hidden md:block">
             <ul className="flex space-x-6 items-center">
-              {['Home', 'About', 'Services', 'Timeline', 'Journey', 'Aspirations', 'Projects', 'Reflections', 'Contact'].map((item, index) => (
+              {['Home', 'About', 'Skills', 'Projects', 'Achievements', 'Blog', 'Contact'].map((item, index) => (
                 <li key={index}>
                   <a 
                     href={`#${item.toLowerCase()}`}
@@ -63,7 +63,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
 
         <nav className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} mt-4`}>
           <ul className="flex flex-col space-y-4">
-            {['Home', 'About', 'Services', 'Timeline', 'Journey', 'Aspirations', 'Projects', 'Reflections', 'Features', 'Pricing', 'NewsTicker', 'Contact'].map((item, index) => (
+            {['Home', 'About', 'Skills', 'Projects', 'Achievements', 'Blog', 'Contact'].map((item, index) => (
               <li key={index}>
                 <a 
                   href={`#${item.toLowerCase()}`}
