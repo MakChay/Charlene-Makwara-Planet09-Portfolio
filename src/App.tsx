@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import ScrollToTop from './components/ScrollToTop';
+import ProfessionalChatbot from './components/ProfessionalChatbot';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Features from './components/Features';
+import About from './components/About';
+import Skills from './components/Skills';
+import UniqueValue from './components/UniqueValue';
+import Projects from './components/Projects';
+import Achievements from './components/Achievements';
+import Blog from './components/Blog';
+import Services from './components/Services';
+import BeyondCode from './components/BeyondCode';
+import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import NewsTicker from './components/NewsTicker';
-import Pricing from './components/Pricing';
-import Home from './components/Home';
-import About from './components/About';
-import Services from './components/Services';
-import Projects from './components/Projects';
-import Timeline from './components/Timeline';
-import Aspirations from './components/Aspirations';
-import Reflections from './components/Reflections';
-import Journey from './components/Journey';
 
 const App: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
@@ -43,21 +42,20 @@ const App: React.FC = () => {
       {/* Main Content */}
       <main className="flex-grow">
         <Hero />
-        <Home />
         <About />
-        <Services />
-        <Features />
-        <Timeline />
-        <Journey />
-        <Aspirations />
+        <Skills />
+        <UniqueValue />
         <Projects />
-        <Reflections />
-        <Pricing />
-        <NewsTicker isDarkMode={isDarkMode} />
+        <Achievements />
+        <Blog />
+        <Services />
+        <BeyondCode />
+        <Testimonials />
         <Contact />
         <ScrollToTop />
       </main>
       <Footer />
+      <ProfessionalChatbot />
     </div>
   );
 };
