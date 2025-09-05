@@ -1,5 +1,5 @@
 import React from 'react';
-import RoboHuman from '../images/RoboHuman.jpg'; // Adjust the path to your image file
+import RoboHuman from '../images/Makwara.jpg'; // Adjust the path to your image file
 
 const About = () => {
   return (
@@ -15,17 +15,14 @@ const About = () => {
         </div>
         <div className="md:w-1/2">
           <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">
-            About Us
+            About Charlene Makwara (Chay)
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">
-            We are a forward-thinking team of developers and innovators driven by a passion for building inclusive, tech-powered solutions.
-          </p>
+          A passionate Web & Software Developer with a love for creating clean, functional, and engaging digital experiences. My journey in tech blends frontend creativity with a growing mastery of backend development, allowing me to build projects that are both visually appealing and technically sound.</p>
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">
-            Whether it's improving student recruitment, enabling smart urban farming, or designing scalable admin dashboards, we aim to create impact where it matters most—bridging gaps and building for the future.
-          </p>
+          I’m driven by curiosity and the belief that technology can be a powerful tool for empowerment and problem-solving. Beyond coding, I’m an active community volunteer and 4IR enthusiast, dedicated to sharing knowledge, uplifting others, and driving positive change.</p>
           <p className="text-lg text-gray-600 dark:text-gray-300">
-            Our vision is rooted in accessibility, community growth, and embracing the power of full-stack development to solve real-world challenges.
-          </p>
+          When I’m not immersed in code, you’ll find me working on personal projects, contributing to community initiatives, or learning new tools and technologies to sharpen my craft. I aim to grow into a full-stack developer who builds solutions that matter not just for today, but for the future.</p>
         </div>
       </div>
     </section>
