@@ -20,7 +20,7 @@ const Footer = () => {
               </h3>
             </div>
             <p className="mb-4">
-              A modern starter template with a clean design using black, gold, and silver gray colors.
+              A web developer and mentor dedicated to crafting exceptional digital experiences. Whilst mentoring aspiring developers and contributing to the tech community.
             </p>
           </div>
 
@@ -44,15 +44,11 @@ const Footer = () => {
                 <li>
                   <a href="#journey" className="hover:text-amber-400 transition-colors duration-300 hover:pl-2">Journey</a>
                 </li>
-                <li>
-                  <a href="#aspirations" className="hover:text-amber-400 transition-colors duration-300 hover:pl-2">Aspirations</a>
-                </li>
+                
                 <li>
                   <a href="#projects" className="hover:text-amber-400 transition-colors duration-300 hover:pl-2">Projects</a>
                 </li>
-                <li>
-                  <a href="#reflections" className="hover:text-amber-400 transition-colors duration-300 hover:pl-2">Reflections</a>
-                </li>
+              
                 <li>
                   <a href="#contact" className="hover:text-amber-400 transition-colors duration-300 hover:pl-2">Contact</a>
                 </li>
@@ -63,9 +59,7 @@ const Footer = () => {
                     Pricing
                   </a>
                 </li>
-                <li>
-                  <a href="#documentation" className="hover:text-amber-400 transition-colors duration-300 hover:pl-2">Documentation</a>
-                </li>
+                
                 <li>
                   <a href="#blogs" className="hover:text-amber-400 transition-colors duration-300 hover:pl-2">Blog</a>
                 </li>
@@ -82,8 +76,8 @@ const Footer = () => {
             <address className="not-italic space-y-2">
               <p>8 Winterton Road</p>
               <p>Ritson, Durban 4001</p>
-              <p className="mt-2">chaymak16@gmail.com</p>
-              <p>(123) 456-7890</p>
+              <p className="mt-2">makwarac@yahoo.com</p>
+              <p>(078) 176-9558</p>
             </address>
           </div>
         </div>

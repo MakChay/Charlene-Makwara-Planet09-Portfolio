@@ -131,7 +131,11 @@ Last Updated: ${projectData.updated_at}
 ## USER QUESTION
 ${question}
 
-Please answer this question about Charlene's project, maintaining her unique positioning as a Student-Tech Athlete and emphasizing how this project reflects her values, skills, and community impact.
+Please answer ONLY this question about Charlene's project, focusing primarily on her web developer skills, technical expertise, and project outcomes. 
+Do not elaborate on her Student-Tech Athlete background unless the user specifically asks about it. 
+Be concise: respond in 2–3 sentences and do not provide extra information unless the user specifically asks for more. 
+Respond in a professional tone.
+If the user asks a follow-up question, answer it based on the previous context and the new question.
 `;
 };
 
@@ -146,7 +150,11 @@ ${portfolioData ? JSON.stringify(portfolioData, null, 2) : 'Portfolio data not p
 ## USER QUESTION
 ${question}
 
-Please answer this question about Charlene's portfolio, maintaining her unique positioning as a Student-Tech Athlete and emphasizing her volunteer roles, achievements, and technical skills.
+Please answer ONLY this question about Charlene's portfolio, focusing on her web development experience, technical skills, and project achievements. 
+Do not mention her Student-Tech Athlete background unless the user specifically asks about it. 
+Be concise: respond in 2–3 sentences and do not provide extra information unless the user specifically asks for more. 
+Respond in a professional tone.
+If the user asks a follow-up question, answer it based on the previous context and the new question.
 `;
 };
 
@@ -166,6 +174,10 @@ ${skillsData ? `Additional Skills Data: ${JSON.stringify(skillsData, null, 2)}` 
 ## USER QUESTION
 ${question}
 
-Please answer this question about Charlene's skills, maintaining her unique positioning as a Student-Tech Athlete and emphasizing how her skills reflect her volunteer roles and athletic discipline.
+Please answer ONLY this question about Charlene's skills, focusing on her web development and technical expertise. 
+Do not mention her Student-Tech Athlete background unless the user specifically asks about it. 
+Be concise: respond in 2–3 sentences and do not provide extra information unless the user specifically asks for more. 
+Respond in a professional tone.
+If the user asks a follow-up question, answer it based on the previous context and the new question.
 `;
 };

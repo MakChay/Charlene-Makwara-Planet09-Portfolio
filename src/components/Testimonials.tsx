@@ -5,15 +5,15 @@ const Testimonials = () => {
     {
       id: 1,
       quote: "Chay demonstrates strong leadership, initiative, and technical ability. Her work on the Hybrid Demo Monday platform has created valuable opportunities for student collaboration.",
-      author: "Dr. Sarah Johnson",
-      role: "Head of Computer Science, DUT",
+      author: "Kwanele Mazibuko",
+      role: "Founder of Singawe Innovative, KZN",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&q=80&w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 2,
       quote: "Working with Chay on the USAs competition was incredible. Her technical skills and team leadership were key to our first-place victory. She's a natural problem-solver.",
-      author: "Michael Chen",
-      role: "Teammate, USAs Competition Winner",
+      author: "Nkosinathi Zulu",
+      role: "Player, USSAs Competition Winner",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150&fit=crop&crop=face"
     },
     {
@@ -26,8 +26,8 @@ const Testimonials = () => {
     {
       id: 4,
       quote: "As basketball team manager, Chay showed exceptional organizational skills and team spirit. She brings the same dedication and leadership to her tech projects.",
-      author: "James Wilson",
-      role: "Basketball Team Captain, DUT",
+      author: "Ayajabula Mthethwa",
+      role: "Female Basketball Team Captain, DUT",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150&h=150&fit=crop&crop=face"
     },
     {
@@ -40,8 +40,8 @@ const Testimonials = () => {
     {
       id: 6,
       quote: "Chay is not just a talented developer, but also a community builder. Her work creating platforms for student innovation has had a lasting impact on our university.",
-      author: "Prof. David Kim",
-      role: "Faculty Advisor, DUT",
+      author: "Mr Fanie Ndlovu",
+      role: "ARM Mentor, DUT",
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150&fit=crop&crop=face"
     }
   ];
