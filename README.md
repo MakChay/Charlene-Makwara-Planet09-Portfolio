@@ -1,4 +1,4 @@
-```markdown
+
 # 🌍 Chay Makwara – Standout Portfolio
 
 Welcome to the portfolio of Charlene (Chay) Makwara, a passionate Web & Software Developer, community builder, and aspiring software engineer. This project showcases Chay's technical skills, achievements, and community impact in a modern, responsive, and professional format.
