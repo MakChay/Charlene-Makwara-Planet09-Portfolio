@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ScrollToTop from './components/ScrollToTop';
-import ProfessionalChatbot from './components/ProfessionalChatbot';
+import GeminiChat from './components/GeminiChat';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -55,7 +55,7 @@ const App: React.FC = () => {
         <ScrollToTop />
       </main>
       <Footer />
-      <ProfessionalChatbot />
+      <GeminiChat />
     </div>
   );
 };
