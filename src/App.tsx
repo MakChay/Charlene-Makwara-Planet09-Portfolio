@@ -52,7 +52,7 @@ const App: React.FC = () => {
         <BeyondCode />
         <Testimonials />
         <Contact />
-        <ScrollToTop />
+        
       </main>
       <Footer />
       <ProfessionalChatbot />
