@@ -11,7 +11,7 @@ const Services = () => {
       price: 'From $500'
     },
     {
-      title: 'App Prototyping',
+      title: 'Web App Prototyping',
       description: 'Creating interactive prototypes and MVPs to validate your ideas before full development.',
       features: ['UI/UX Prototyping', 'User Testing', 'Technical Feasibility', 'MVP Development'],
       icon: <FaMobile className="text-amber-400 text-4xl mb-4" />,
