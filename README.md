@@ -99,9 +99,9 @@ public/
 
 ## 📬 Contact
 
-- [LinkedIn](https://www.linkedin.com/in/your-linkedin)
+- [LinkedIn]([https://www.linkedin.com/in/your-linkedin](https://www.linkedin.com/in/charlene-makwara-2417972b1/))
 - [GitHub](https://github.com/your-username)
-- [Email](mailto:your@email.com)
+- [Email](mailto:makwarac@yahoo.com)
 
 ---
 
