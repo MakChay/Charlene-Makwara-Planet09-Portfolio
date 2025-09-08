@@ -1,4 +1,4 @@
-// pages/api/chat.ts (Next.js API route)
+// pages/api/chat.ts (Next.js API route), using server-side environment variables
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
