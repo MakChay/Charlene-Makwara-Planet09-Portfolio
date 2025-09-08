@@ -89,7 +89,7 @@ Remember: Always represent Charlene as a unique individual who brings athletic d
 `;
 
 export const GEMINI_CONFIG = {
-  apiKey: "AIzaSyAuAdqfZGLsKhH5psvhY6eUjzJt57-CF-A",
+  apiKey: import.meta.env.VITE_GEMINI_API_KEY,
   model: "gemini-1.5-flash", // or "gemini-1.5-pro" for more advanced reasoning
   temperature: 0.7,
   maxTokens: 1000,
