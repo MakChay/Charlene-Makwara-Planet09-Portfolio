@@ -14,7 +14,6 @@ import BeyondCode from './components/BeyondCode';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 
 const App: React.FC = () => {
@@ -55,7 +54,6 @@ const App: React.FC = () => {
         <Testimonials />
         <Contact />
         <ScrollToTop />
-        <SpeedInsights />
         <Analytics />
       </main>
       <Footer />
