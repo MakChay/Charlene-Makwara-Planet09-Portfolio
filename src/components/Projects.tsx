@@ -77,11 +77,11 @@ const Projects: React.FC = () => {
                 Managed the University Basketball team to victory in the University Students Association competition.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-2 py-1 bg-amber-200 dark:bg-amber-700 text-amber-800 dark:text-amber-200 rounded text-sm">Python</span>
-                <span className="px-2 py-1 bg-amber-200 dark:bg-amber-700 text-amber-800 dark:text-amber-200 rounded text-sm">React</span>
+                <span className="px-2 py-1 bg-amber-200 dark:bg-amber-700 text-amber-800 dark:text-amber-200 rounded text-sm">Basketball</span>
+                <span className="px-2 py-1 bg-amber-200 dark:bg-amber-700 text-amber-800 dark:text-amber-200 rounded text-sm">Management</span>
                 <span className="px-2 py-1 bg-amber-200 dark:bg-amber-700 text-amber-800 dark:text-amber-200 rounded text-sm">Leadership</span>
               </div>
-              <div className="text-sm text-gray-600 dark:text-gray-300">2024</div>
+              <div className="text-sm text-gray-600 dark:text-gray-300">2025</div>
             </div>
 
             {/* JCI Hackathon Project */}
@@ -101,7 +101,7 @@ const Projects: React.FC = () => {
                 <span className="px-2 py-1 bg-blue-200 dark:bg-blue-700 text-blue-800 dark:text-blue-200 rounded text-sm">Innovation</span>
                 <span className="px-2 py-1 bg-blue-200 dark:bg-blue-700 text-blue-800 dark:text-blue-200 rounded text-sm">Teamwork</span>
               </div>
-              <div className="text-sm text-gray-600 dark:text-gray-300">2024</div>
+              <div className="text-sm text-gray-600 dark:text-gray-300">2025</div>
             </div>
 
             {/* Hybrid Demo Monday Platform */}
@@ -121,7 +121,7 @@ const Projects: React.FC = () => {
                 <span className="px-2 py-1 bg-green-200 dark:bg-green-700 text-green-800 dark:text-green-200 rounded text-sm">Event Management</span>
                 <span className="px-2 py-1 bg-green-200 dark:bg-green-700 text-green-800 dark:text-green-200 rounded text-sm">Leadership</span>
               </div>
-              <div className="text-sm text-gray-600 dark:text-gray-300">2023-2024</div>
+              <div className="text-sm text-gray-600 dark:text-gray-300">2025</div>
             </div>
           </div>
         </div>
