@@ -81,7 +81,7 @@ const Projects: React.FC = () => {
                 <span className="px-2 py-1 bg-amber-200 dark:bg-amber-700 text-amber-800 dark:text-amber-200 rounded text-sm">Management</span>
                 <span className="px-2 py-1 bg-amber-200 dark:bg-amber-700 text-amber-800 dark:text-amber-200 rounded text-sm">Leadership</span>
               </div>
-              <div className="text-sm text-gray-600 dark:text-gray-300">2024</div>
+              <div className="text-sm text-gray-600 dark:text-gray-300">2025</div>
             </div>
 
             {/* JCI Hackathon Project */}
